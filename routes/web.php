@@ -18,3 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/sanitizing/form', function () {
+    return view('sanitizing.form');
+});
+
+Route::post('/sanitizing/form', function () {
+    return request()->all();
+});
+
