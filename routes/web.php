@@ -27,3 +27,21 @@ Route::post('/sanitizing/form', function () {
     return request()->all();
 });
 
+
+Route::prefix('fluent')->group(function () {
+    Route::name('fluentroute')->get('/route', function (){
+        return 'fluentroute';
+    });
+});
+
+
+Route::prefix('protected')->middleware('auth')->group(function () {
+    Route::get('/', function (){
+        return 'requires login';
+    });
+
+    Route::middleware('throttle')->get('/throttle', function (){
+        return 'throttle';
+    });
+});
+
