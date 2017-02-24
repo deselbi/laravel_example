@@ -45,3 +45,11 @@ Route::prefix('protected')->middleware('auth')->group(function () {
     });
 });
 
+
+Route::prefix('blade-components-and-slots/')->group(function () {
+    Route::get('components', function (){
+        return view('blade-components-and-slots.components');
+    });
+
+
+});
