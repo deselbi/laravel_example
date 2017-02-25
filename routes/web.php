@@ -1,5 +1,8 @@
 <?php
 
+Event::listen('eloquent.created: App\Foo', function (){
+    var_dump('Foo created');
+});
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,6 +53,5 @@ Route::prefix('blade-components-and-slots/')->group(function () {
     Route::get('components', function (){
         return view('blade-components-and-slots.components');
     });
-
 
 });
