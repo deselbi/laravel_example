@@ -20,9 +20,6 @@ Exercises for [What's New in Laravel 5.4](https://laracasts.com/series/whats-new
  - Blade Components and Slots
  - Markdown Mailables
  - Real-Time Facades
- 
-## Todo
-
  - Browser Testing With Laravel Dusk
  - Map Eloquent Events to Dedicated Classes
  
